@@ -2,6 +2,7 @@ import React from 'react';
 import Filter from '../components/Filter';
 
 import { storiesOf } from '@storybook/react';
+import { withKnobs, text, boolean, number } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import { withInfo } from '@storybook/addon-info';
@@ -26,10 +27,11 @@ const data = [
 ]
 
 storiesOf('Filter', module)
+  .addDecorator(withKnobs)
   .add('Simple', withInfo(`
       Filter an array of data and return results that contain the search string
     `)(() => (
-    <Filter search="Bernard" data={data}>
+    <Filter search={text('Search', 'Bernard')} data={data}>
       {results => (
         <table className="table">
           <thead>
