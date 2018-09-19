@@ -7,10 +7,11 @@ import { addDecorator } from '@storybook/react/dist/client/preview';
 setDefaults({
   header: true,
   inline: true,
+  // maxPropsIntoLine: 1000
 });
 
 function loadStories() {
-  require('../src/stories');
+  require('../stories');
 }
 
 configure(loadStories, module);
