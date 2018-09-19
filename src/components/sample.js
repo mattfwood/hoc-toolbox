@@ -9,7 +9,7 @@ export default [
   {
     task: 'Gain Sentience',
     project_name: 'Maze',
-    assignee: 'Dorothy Abernathy',
+    assignee: 'Dolores Abernathy',
     due_date: '2018-09-08',
     is_completed: true
   }

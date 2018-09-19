@@ -18,11 +18,9 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
-    "storybook": "start-storybook -p 9009",
-    "docs": "build-storybook",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
-    "deploy": "yarn docz:dev && gh-pages -d .docz/dist"
+    "deploy": "yarn docz:build && gh-pages -d .docz/dist"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",

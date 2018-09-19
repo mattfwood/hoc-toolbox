@@ -6,7 +6,8 @@
     "ordering": "descending",
     "version": "1.0.1",
     "repository": "https://github.com/mattfwood/hoc-toolbox",
-    "native": false
+    "native": false,
+    "base": "/hoc-toolbox/"
   },
   "entries": {
     "src/components/Filter.mdx": {
