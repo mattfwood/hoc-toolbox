@@ -4,8 +4,10 @@ menu: Components
 ---
 
 import { Playground, PropsTable } from 'docz'
+import Example from './utils/Example'
 import { Filter } from '../index.js'
 import data from './sample'
+import { styles } from './demo.module.css';
 
 # Filter
 
@@ -16,31 +18,33 @@ import data from './sample'
 ## Basic usage
 
 <Playground>
-  <Filter data={data} search="Bernard">
-    {results => (
-      <table className='table'>
-          <thead>
-            <tr>
-              {Object.keys(data[0]).map(key => (
-                <td>{key.toUpperCase().replace('_', ' ')}</td>
-              ))}
-            </tr>
-          </thead>
-          {results.map(result => (
-            <tbody>
+  <Example>
+    <Filter data={data} search="Bernard">
+      {results => (
+        <table className='table'>
+            <thead>
               <tr>
-                {Object.keys(result).map(key => (
-                  <td>
-                    {typeof result[key] === 'boolean'
-                      ? String(result[key])
-                      : result[key]
-                    }
-                  </td>
+                {Object.keys(data[0]).map(key => (
+                  <td>{key.toUpperCase().replace('_', ' ')}</td>
                 ))}
               </tr>
-            </tbody>
-          ))}
-        </table>
-    )}
-  </Filter>
+            </thead>
+            {results.map(result => (
+              <tbody>
+                <tr>
+                  {Object.keys(result).map(key => (
+                    <td>
+                      {typeof result[key] === 'boolean'
+                        ? String(result[key])
+                        : result[key]
+                      }
+                    </td>
+                  ))}
+                </tr>
+              </tbody>
+            ))}
+          </table>
+      )}
+    </Filter>
+  </Example>
 </Playground>
