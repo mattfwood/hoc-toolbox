@@ -1,7 +1,7 @@
 {
-  "app.js": "/static/js/app.008f1817.js",
-  "src-components-filter.js": "/static/js/src-components-filter.3b125fbb.js",
-  "vendors.js": "/static/js/vendors.0d9cb4a7.js",
-  "runtime~app.js": "/static/js/runtime~app.1dd2d49edf6c1115a1a8.js",
-  "index.html": "/index.html"
+  "app.js": "/hoc-toolbox/static/js/app.4da2be4b.js",
+  "src-components-filter.js": "/hoc-toolbox/static/js/src-components-filter.7d7bda45.js",
+  "vendors.js": "/hoc-toolbox/static/js/vendors.a99f9df1.js",
+  "runtime~app.js": "/hoc-toolbox/static/js/runtime~app.846715261fbf49be36fd.js",
+  "index.html": "/hoc-toolbox/index.html"
 }
