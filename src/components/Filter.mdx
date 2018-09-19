@@ -1,17 +1,46 @@
 ---
-name: Button
+name: Filter
+menu: Components
 ---
 
 import { Playground, PropsTable } from 'docz'
-import Button from './'
+import { Filter } from '../index.js'
+import data from './sample'
 
-# Button
+# Filter
 
-<PropsTable of={Button} />
+## Properties
+
+<PropsTable of={Filter} />
 
 ## Basic usage
 
 <Playground>
-  <Button>Click me</Button>
-  <Button kind="secondary">Click me</Button>
+  <Filter data={data} search="Bernard">
+    {results => (
+      <table className='table'>
+          <thead>
+            <tr>
+              {Object.keys(data[0]).map(key => (
+                <td>{key.toUpperCase().replace('_', ' ')}</td>
+              ))}
+            </tr>
+          </thead>
+          {results.map(result => (
+            <tbody>
+              <tr>
+                {Object.keys(result).map(key => (
+                  <td>
+                    {typeof result[key] === 'boolean'
+                      ? String(result[key])
+                      : result[key]
+                    }
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          ))}
+        </table>
+    )}
+  </Filter>
 </Playground>

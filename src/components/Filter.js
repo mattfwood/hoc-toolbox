@@ -1,10 +1,7 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
-/**
- * @description Filter an array of data and return results that contain the search string
- * @param data - something
- */
-function Filter(props) {
+const Filter = (props) => {
   const { search, data } = props
 
   if (!Array.isArray(data)) {
@@ -24,12 +21,20 @@ function Filter(props) {
     // return match;
   })
 
-  return props.children(filteredData)
+  // return props.children(filteredData)
+
+  return (
+    <React.Fragment>
+      {props.children(filteredData)}
+    </React.Fragment>
+  )
 }
 
 Filter.propTypes = {
+  /** Array of strings or objects to search through */
   data: PropTypes.arrayOf(PropTypes.any).isRequired,
+  /** Search string to look for in all items */
   search: PropTypes.string.isRequired,
 }
 
-export default Filter
+export default Filter;

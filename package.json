@@ -20,9 +20,9 @@
     "prepare": "yarn run build",
     "storybook": "start-storybook -p 9009",
     "docs": "build-storybook",
-    "deploy": "yarn run docs && gh-pages -d storybook-static",
     "docz:dev": "docz dev",
-    "docz:build": "docz build"
+    "docz:build": "docz build",
+    "deploy": "yarn docz:dev && gh-pages -d .docz/dist"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",

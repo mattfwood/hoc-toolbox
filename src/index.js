@@ -1,1 +1,3 @@
-export Filter from './components/Filter'
+import Filter from './components/Filter'
+
+export { Filter }
