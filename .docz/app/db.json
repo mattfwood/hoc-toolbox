@@ -1,0 +1,35 @@
+{
+  "config": {
+    "title": "Hoc Toolbox",
+    "description": "Higher Order Utility Components",
+    "themeConfig": {},
+    "ordering": "descending",
+    "version": "1.0.1",
+    "repository": "https://github.com/mattfwood/hoc-toolbox",
+    "native": false
+  },
+  "entries": {
+    "src/components/Filter.mdx": {
+      "name": "Button",
+      "id": "63d665d2526fb98c4a6a3ad2324f5c91",
+      "filepath": "src/components/Filter.mdx",
+      "link": "https://github.com/mattfwood/hoc-toolbox/edit/master/src/components/Filter.mdx",
+      "slug": "src-components-filter",
+      "route": "/src-components-filter",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "button",
+          "value": "Button"
+        },
+        {
+          "depth": 2,
+          "slug": "basic-usage",
+          "value": "Basic usage"
+        }
+      ]
+    }
+  }
+}
