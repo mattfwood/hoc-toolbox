@@ -1,31 +1,15 @@
-# hoc-toolbox
+[![build status](https://secure.travis-ci.org/survivejs/react-component-boilerplate.svg)](http://travis-ci.org/survivejs/react-component-boilerplate) [![Dependency Status](https://david-dm.org/survivejs/react-component-boilerplate.svg)](https://david-dm.org/survivejs/react-component-boilerplate)
 
-> Higher Order Utility Components
+# Higher Order Component Utility Library
 
-[![NPM](https://img.shields.io/npm/v/hoc-toolbox.svg)](https://www.npmjs.com/package/hoc-toolbox) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+A collection of [higher order components](https://reactjs.org/docs/higher-order-components.html) for common React patterns.
 
-## Install
+## Installation
 
-```bash
-npm install --save hoc-toolbox
 ```
-
-## Usage
-
-```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'hoc-toolbox'
-
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
+$ yarn add hoc-utility-library
 ```
-
-## License
-
-MIT © [mattfwood](https://github.com/mattfwood)
+or
+```
+$ npm install hoc-utility-library
+```
