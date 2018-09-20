@@ -5,7 +5,7 @@ import Filter from './index';
 const data = ['One', 'Two', 'Three'];
 
 describe('Filter', () => {
-  it('filters an array of strings', () => {
+  it('should filter an array of strings', () => {
     const { getByTestId, rerender } = render(
       <Filter data={data} search="One">
         {results => (
@@ -37,4 +37,22 @@ describe('Filter', () => {
     const updatedResults = getByTestId('results');
     expect(updatedResults.textContent.includes('Two')).toBe(true);
   });
+
+  it('should throw an error if incorrect datatype is passed', () => {
+    const spy = jest.spyOn(global.console, 'warn');
+
+    const { getByTestId, rerender } = render(
+      <Filter data="bad data" search="One">
+        {results => (
+          <div data-testid="results">
+            {results.map((result, i) => (
+              <div key={i}>{result}</div>
+            ))}
+          </div>
+        )}
+      </Filter>
+    );
+
+    expect(spy).toHaveBeenCalled();
+  })
 });

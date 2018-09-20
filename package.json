@@ -90,5 +90,13 @@
   ],
   "dependencies": {
     "prop-types": "^15.6.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      [
+        "<rootDir>/components/If/*.{js,jsx}",
+        "<rootDir>/components/Filter/*.{js,jsx}"
+      ]
+    ]
   }
 }

@@ -5,7 +5,8 @@ const Filter = (props) => {
   const { search, data } = props
 
   if (!Array.isArray(data)) {
-    throw new TypeError('Filter prop "data" must be an array')
+    console.warn('Filter prop "data" must be an array');
+    // throw new TypeError('Filter prop "data" must be an array')
   }
 
   if (typeof search !== 'string' && typeof search !== 'number') {
