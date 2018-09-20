@@ -6,10 +6,11 @@ const Filter = (props) => {
 
   if (!Array.isArray(data)) {
     console.warn('Filter prop "data" must be an array');
-    // throw new TypeError('Filter prop "data" must be an array')
+    throw new TypeError('Filter prop "data" must be an array')
   }
 
   if (typeof search !== 'string' && typeof search !== 'number') {
+    console.warn('Filter prop "search" must be type "string" or "number"');
     throw new TypeError('Filter prop "search" must be type "string" or "number"')
   }
 
@@ -21,8 +22,6 @@ const Filter = (props) => {
     // console.log({ strings, match });
     // return match;
   })
-
-  // return props.children(filteredData)
 
   return (
     <React.Fragment>

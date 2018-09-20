@@ -38,21 +38,46 @@ describe('Filter', () => {
     expect(updatedResults.textContent.includes('Two')).toBe(true);
   });
 
-  it('should throw an error if incorrect datatype is passed', () => {
+  it('should throw an error if incorrect datatype is passed to "data" prop', () => {
+    // Silence output when errors / warnings are expected
+    console.error = jest.fn();
+    console.warn = jest.fn()
     const spy = jest.spyOn(global.console, 'warn');
 
-    const { getByTestId, rerender } = render(
-      <Filter data="bad data" search="One">
-        {results => (
-          <div data-testid="results">
-            {results.map((result, i) => (
-              <div key={i}>{result}</div>
-            ))}
-          </div>
-        )}
-      </Filter>
-    );
+    expect(() => {
+      render(
+        <Filter data="bad data" search="One">
+          {results => (
+            <div data-testid="results">
+              {results.map((result, i) => (
+                <div key={i}>{result}</div>
+              ))}
+            </div>
+          )}
+        </Filter>
+      );
+    }).toThrowError(TypeError('Filter prop "data" must be an array'));
 
-    expect(spy).toHaveBeenCalled();
+    expect(spy).toHaveBeenCalledWith('Filter prop "data" must be an array');
+  })
+
+  it('should throw an error if incorrect datatype is passed to "search"', () => {
+    const spy = jest.spyOn(global.console, 'warn');
+
+    expect(() => {
+      render(
+        <Filter data={data} search={[1, 2, 3]}>
+          {results => (
+            <div data-testid="results">
+              {results.map((result, i) => (
+                <div key={i}>{result}</div>
+              ))}
+            </div>
+          )}
+        </Filter>
+      );
+    }).toThrowError(TypeError('Filter prop "search" must be type "string" or "number"'));
+
+    expect(spy).toHaveBeenCalledWith('Filter prop "search" must be type "string" or "number"');
   })
 });

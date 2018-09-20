@@ -30,6 +30,9 @@ describe('If', () => {
   });
 
   it('shows console warning if condition prop is not defined', () => {
+    // Silence output when errors / warnings are expected
+    console.error = jest.fn()
+    console.warn = jest.fn()
     const spy = jest.spyOn(global.console, 'warn');
     const { getByTestId, rerender, container } = render(
       <If>

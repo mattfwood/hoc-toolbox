@@ -93,10 +93,8 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      [
-        "<rootDir>/components/If/*.{js,jsx}",
-        "<rootDir>/components/Filter/*.{js,jsx}"
-      ]
+      "src/components/If/index.js",
+      "src/components/Filter/index.js"
     ]
   }
 }
