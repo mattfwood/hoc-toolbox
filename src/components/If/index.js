@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 
 const If = (props) => {
   const { condition, children } = props;
-  console.log(condition);
+  if (condition === undefined) {
+    console.warn('Prop "condition" should be provided, even if it is false.');
+  }
+
   if (condition) {
     return (
       <Fragment>
@@ -17,11 +20,7 @@ const If = (props) => {
 
 If.propTypes = {
   /** Show child elements */
-  condition: PropTypes.bool,
-}
-
-If.defaultProps = {
-  condition: false,
+  condition: PropTypes.bool.isRequired,
 }
 
 export default If;

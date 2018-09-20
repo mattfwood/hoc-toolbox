@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-testing-library';
-import Filter from './components/Filter';
+import Filter from './index';
 // import sample from './components/sample';
 const data = ['One', 'Two', 'Three'];
 
