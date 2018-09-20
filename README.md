@@ -4,7 +4,7 @@
 
 A collection of [higher order components](https://reactjs.org/docs/higher-order-components.html) for common React patterns.
 
-### [View Storybook](https://mattfwood.github.io/hoc-toolbox/)
+### [View Component Documentation](https://mattfwood.github.io/hoc-toolbox/)
 
 ## Installation
 
