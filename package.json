@@ -59,6 +59,7 @@
     "@storybook/addons": "^3.4.11",
     "@storybook/react": "^3.4.11",
     "babel-eslint": "^8.2.5",
+    "coveralls": "^3.0.2",
     "cross-env": "^5.1.4",
     "docz": "^0.11.2",
     "docz-plugin-css": "^0.11.0",
