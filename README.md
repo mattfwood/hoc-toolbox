@@ -10,7 +10,7 @@
 
 A collection of [higher order components](https://reactjs.org/docs/higher-order-components.html) for common React patterns.
 
-### [Component Documentation](https://mattfwood.github.io/hoc-toolbox/)
+### [Component Documentation](https://hoc-toolbox.netlify.com/)
 
 ## Features
 
