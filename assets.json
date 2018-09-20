@@ -1,8 +1,9 @@
 {
-  "app.js": "/hoc-toolbox/static/js/app.3f333f71.js",
-  "src-components-filter-filter.js": "/hoc-toolbox/static/js/src-components-filter-filter.af6c4f1b.js",
-  "src-components-if-if.js": "/hoc-toolbox/static/js/src-components-if-if.b6edd7fe.js",
-  "vendors.js": "/hoc-toolbox/static/js/vendors.35122043.js",
-  "runtime~app.js": "/hoc-toolbox/static/js/runtime~app.d8f3dab76a48672f051c.js",
+  "app.js": "/hoc-toolbox/static/js/app.9e563b45.js",
+  "src-components-index.js": "/hoc-toolbox/static/js/src-components-index.cb4662d9.js",
+  "src-components-filter-filter.js": "/hoc-toolbox/static/js/src-components-filter-filter.578e5fbe.js",
+  "src-components-if-if.js": "/hoc-toolbox/static/js/src-components-if-if.6c394873.js",
+  "vendors.js": "/hoc-toolbox/static/js/vendors.55c1f4a8.js",
+  "runtime~app.js": "/hoc-toolbox/static/js/runtime~app.63418f406d8947abad64.js",
   "index.html": "/hoc-toolbox/index.html"
 }
