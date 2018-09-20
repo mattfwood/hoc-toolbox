@@ -1,0 +1,29 @@
+---
+name: About
+route: /
+---
+
+import { Playground, PropsTable } from 'docz'
+
+# Higher Order Component Toolbox
+
+This library is designed to encourage cleaner React codebases by avoiding some of the less readable hacks that React developers use frequently.
+
+Instead of doing this:
+
+```jsx
+  <div>
+    {true && (
+      <div>Some conditional text</div>
+    )}
+  </div>
+```
+
+It makes code much more readable and reusable to use smarter components like this:
+```jsx
+  <If condition={true}>
+    <div>Some conditional text</div>
+  </If>
+```
+
+

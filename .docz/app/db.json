@@ -22,20 +22,37 @@
       }
     },
     "ordering": "descending",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "repository": "https://github.com/mattfwood/hoc-toolbox",
     "native": false,
     "base": "/hoc-toolbox/"
   },
   "entries": {
+    "src/components/index.mdx": {
+      "name": "About",
+      "route": "/about",
+      "order": 1,
+      "id": "8f6609a989594e49bce5582173f1be02",
+      "filepath": "src/components/index.mdx",
+      "link": "https://github.com/mattfwood/hoc-toolbox/edit/master/src/components/index.mdx",
+      "slug": "src-components-index",
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "higher-order-component-toolbox",
+          "value": "Higher Order Component Toolbox"
+        }
+      ]
+    },
     "src/components/Filter/Filter.mdx": {
       "name": "Filter",
+      "route": "/",
       "menu": "Components",
       "id": "d77ceb02b420f5a4717e2bad30436239",
       "filepath": "src/components/Filter/Filter.mdx",
       "link": "https://github.com/mattfwood/hoc-toolbox/edit/master/src/components/Filter/Filter.mdx",
       "slug": "src-components-filter-filter",
-      "route": "/src-components-filter-filter",
       "order": 0,
       "headings": [
         {
