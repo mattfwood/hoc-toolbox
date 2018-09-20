@@ -1,4 +1,10 @@
-[![build status](https://secure.travis-ci.org/survivejs/react-component-boilerplate.svg)](http://travis-ci.org/survivejs/react-component-boilerplate) [![Dependency Status](https://david-dm.org/survivejs/react-component-boilerplate.svg)](https://david-dm.org/survivejs/react-component-boilerplate)
+[![npm version](https://badge.fury.io/js/hoc-toolbox.svg)](https://badge.fury.io/js/hoc-toolbox) [![build status](https://app.codeship.com/projects/e39522f0-9f1e-0136-6e41-628a1fa699e3/status?branch=master)](https://app.codeship.com/projects/306382)
+![Libraries.io for GitHub](https://img.shields.io/librariesio/github/mattfwood/hoc-toolbox.svg)
+
+![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/hoc-toolbox.svg)
+![GitHub](https://img.shields.io/github/license/mattfwood/hoc-toolbox.svg)
+
+
 
 # Higher Order Component Toolbox
 
