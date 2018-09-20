@@ -2,15 +2,30 @@
   "config": {
     "title": "Hoc Toolbox",
     "description": "Higher Order Utility Components",
-    "themeConfig": {},
+    "themeConfig": {
+      "styles": {
+        "table": {
+          "width": "100%",
+          "margin-bottom": "1rem",
+          "background-color": "transparent"
+        },
+        "tr": {
+          "padding": "0.75rem",
+          "verticalAlign": "top",
+          "borderTop": "1px solid #dee2e6"
+        },
+        "th": {
+          "padding": "0.75rem",
+          "verticalAlign": "top",
+          "borderTop": "1px solid #dee2e6"
+        }
+      }
+    },
     "ordering": "descending",
     "version": "1.0.1",
     "repository": "https://github.com/mattfwood/hoc-toolbox",
     "native": false,
-    "base": "/hoc-toolbox/",
-    "plugins": [
-      {}
-    ]
+    "base": "/hoc-toolbox/"
   },
   "entries": {
     "src/components/Filter.mdx": {
@@ -27,6 +42,33 @@
           "depth": 1,
           "slug": "filter",
           "value": "Filter"
+        },
+        {
+          "depth": 2,
+          "slug": "properties",
+          "value": "Properties"
+        },
+        {
+          "depth": 2,
+          "slug": "basic-usage",
+          "value": "Basic usage"
+        }
+      ]
+    },
+    "src/components/If/If.mdx": {
+      "name": "If",
+      "menu": "Components",
+      "id": "6aef080c50f6563e1ce271cca048138d",
+      "filepath": "src/components/If/If.mdx",
+      "link": "https://github.com/mattfwood/hoc-toolbox/edit/master/src/components/If/If.mdx",
+      "slug": "src-components-if-if",
+      "route": "/src-components-if-if",
+      "order": 0,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "if",
+          "value": "If"
         },
         {
           "depth": 2,

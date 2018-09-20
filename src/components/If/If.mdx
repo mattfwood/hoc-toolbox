@@ -1,0 +1,27 @@
+---
+name: If
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import If from './index.js'
+
+# If
+
+Conditional rendering utility component to show or hide content based on `condition` boolean.
+
+## Properties
+
+<PropsTable of={If} />
+
+## Condition
+
+<Playground>
+  <If condition={true}>
+    <div>You can see me!</div>
+  </If>
+
+  <If condition={false}>
+    <div>You can't see me</div>
+  </If>
+</Playground>
