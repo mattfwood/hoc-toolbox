@@ -19,6 +19,7 @@
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "docz:dev": "docz dev",
+    "prepublish": "yarn run build",
     "docz:build": "docz build",
     "deploy": "yarn docz:build && gh-pages -d .docz/dist"
   },
