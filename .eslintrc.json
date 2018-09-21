@@ -4,6 +4,11 @@
     "prettier",
     "prettier/react"
   ],
+  "globals": {
+    "expect": true,
+    "describe": true,
+    "jest": true
+  },
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 8,

@@ -1,0 +1,46 @@
+---
+name: Fetch
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz'
+import Fetch from './index.js';
+
+# Fetch
+
+## Properties
+
+<PropsTable of={Fetch} />
+
+## Examples
+
+<Playground>
+  <Fetch url="https://jsonplaceholder.typicode.com/comments/1">
+    {({ data, loading, error }) => (
+      <div>
+        {loading && (
+          <div>Loading...</div>
+        )}
+        {error && (
+          <div>Error!</div>
+        )}
+        {data && (
+          <div>{data.email}</div>
+        )}
+      </div>
+    )}
+  </Fetch>
+  <Fetch url="invalid_url">
+    {({ data, loading, error }) => {
+      if (loading) {
+        return <div data-testid="loading">Loading...</div>;
+      }
+
+      if (error) {
+        return <div data-testid="error">Error!</div>;
+      }
+
+      return <div data-testid="data">{data.email}</div>;
+    }}
+  </Fetch>
+</Playground>

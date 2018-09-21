@@ -41,7 +41,7 @@ describe('Filter', () => {
   it('should throw an error if incorrect datatype is passed to "data" prop', () => {
     // Silence output when errors / warnings are expected
     console.error = jest.fn();
-    console.warn = jest.fn()
+    console.warn = jest.fn();
     const spy = jest.spyOn(global.console, 'warn');
 
     expect(() => {
@@ -59,7 +59,7 @@ describe('Filter', () => {
     }).toThrowError(TypeError('Filter prop "data" must be an array'));
 
     expect(spy).toHaveBeenCalledWith('Filter prop "data" must be an array');
-  })
+  });
 
   it('should throw an error if incorrect datatype is passed to "search"', () => {
     const spy = jest.spyOn(global.console, 'warn');
@@ -79,5 +79,5 @@ describe('Filter', () => {
     }).toThrowError(TypeError('Filter prop "search" must be type "string" or "number"'));
 
     expect(spy).toHaveBeenCalledWith('Filter prop "search" must be type "string" or "number"');
-  })
+  });
 });

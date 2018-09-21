@@ -7,7 +7,7 @@ const data = ['One', 'Two', 'Three'];
 describe('If', () => {
   it('shows child elements when true', () => {
     const { getByTestId, rerender, container } = render(
-      <If condition={true}>
+      <If condition>
         <div data-testid="children">
           <div>Conditional Content</div>
         </div>
@@ -31,8 +31,8 @@ describe('If', () => {
 
   it('shows console warning if condition prop is not defined', () => {
     // Silence output when errors / warnings are expected
-    console.error = jest.fn()
-    console.warn = jest.fn()
+    console.error = jest.fn();
+    console.warn = jest.fn();
     const spy = jest.spyOn(global.console, 'warn');
     const { getByTestId, rerender, container } = render(
       <If>
@@ -53,5 +53,5 @@ describe('If', () => {
     //   </If>
     //   )
     // ).toThrow();
-  })
+  });
 });

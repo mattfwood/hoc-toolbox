@@ -9,6 +9,11 @@ class Fetch extends Component {
     error: null,
   };
 
+  static propTypes = {
+    /** URL of the endpoint to fetch data from */
+    url: PropTypes.string.isRequired,
+  };
+
   async componentDidMount() {
     const { url } = this.props;
 
@@ -26,6 +31,7 @@ class Fetch extends Component {
         loading: false,
       });
     } catch (error) {
+      console.error(error);
       this.setState({
         error,
         loading: false,
