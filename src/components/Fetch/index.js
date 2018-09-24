@@ -10,19 +10,19 @@ class Fetch extends Component {
   };
 
   static propTypes = {
-    /** URL of the endpoint to fetch data from */
+    /** URL endpoint to fetch data from */
     url: PropTypes.string.isRequired,
   };
 
   async componentDidMount() {
     const { url } = this.props;
 
-    if (typeof url !== 'string') {
-      console.warn('Fetch prop "url" must be a string');
-      throw new TypeError('Fetch prop "url" must be a string');
-    }
-
     try {
+      if (typeof url !== 'string') {
+        console.warn('Fetch prop "url" must be a string');
+        throw new Error('Fetch prop "url" must be a string');
+      }
+
       this.setState({ loading: true });
       const res = await axios.get(url);
 
@@ -31,18 +31,45 @@ class Fetch extends Component {
         loading: false,
       });
     } catch (error) {
-      console.error(error);
+      this.handleError(error);
+    }
+  }
+
+  refetch = async (showLoading = false) => {
+    try {
+      const { url } = this.props;
+
+      if (showLoading) {
+        this.setState({ loading: true });
+      }
+      const res = await axios.get(url);
+
       this.setState({
-        error,
+        data: res.data,
         loading: false,
       });
+    } catch (error) {
+      this.handleError(error);
     }
+  };
+
+  handleError = error => {
+    console.error(error);
+    this.setState({
+      error,
+      loading: false,
+    });
+  };
+
+  componentDidCatch(error, info) {
+    console.log('CAUGHT ERROR');
+    console.log(error, info);
   }
 
   render() {
     const { data, error, loading } = this.state;
 
-    return <Fragment>{this.props.children({ data, error, loading })}</Fragment>;
+    return <Fragment>{this.props.children({ data, error, loading, refetch: this.refetch })}</Fragment>;
   }
 }
 

@@ -101,7 +101,8 @@
   "jest": {
     "collectCoverageFrom": [
       "src/components/If/index.js",
-      "src/components/Filter/index.js"
+      "src/components/Filter/index.js",
+      "src/components/Fetch/index.js"
     ]
   }
 }
