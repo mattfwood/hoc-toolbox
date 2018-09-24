@@ -61,11 +61,6 @@ class Fetch extends Component {
     });
   };
 
-  componentDidCatch(error, info) {
-    console.log('CAUGHT ERROR');
-    console.log(error, info);
-  }
-
   render() {
     const { data, error, loading } = this.state;
 
