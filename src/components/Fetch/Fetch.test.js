@@ -64,8 +64,8 @@ describe('Fetch', () => {
 
       const dataNode = await waitForElement(() => getByTestId('data'));
 
-      const currentTimestamp = Date.parse(Date());
-      const firstTimestamp = Date.parse(dataNode.textContent);
+      const currentTimestamp = Date.parse(Date().toString());
+      const firstTimestamp = Date.parse(Date(dataNode.textContent).toString());
 
       // Expect API timestamp to be within 5 seconds of current timestamp
       expect(Math.abs(currentTimestamp - firstTimestamp)).toBeLessThan(8000);
@@ -75,10 +75,10 @@ describe('Fetch', () => {
 
       fireEvent.click(getByTestId('refetch-button'));
 
-      const updatedCurrentTime = Date.parse(Date());
+      const updatedCurrentTime = Date.parse(Date().toString());
       const updatedNode = await waitForElement(() => getByTestId('data'));
 
-      const secondTimestamp = Date.parse(updatedNode.textContent);
+      const secondTimestamp = Date.parse(Date(updatedNode.textContent).toString());
       expect(updatedCurrentTime - secondTimestamp).toBeLessThan(5000);
       expect(secondTimestamp).toBeGreaterThan(firstTimestamp);
       // Increase timeout to 20 seconds since so many data calls are being made
