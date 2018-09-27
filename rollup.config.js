@@ -4,7 +4,7 @@ import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
 import builtins from 'rollup-plugin-node-builtins';
-import nodeGlobals from 'rollup-plugin-node-globals';
+import globals from 'rollup-plugin-node-globals';
 import json from 'rollup-plugin-json';
 import url from 'rollup-plugin-url';
 
@@ -30,13 +30,13 @@ export default {
       modules: true,
     }),
     url(),
-    nodeGlobals(),
-    builtins(),
     json(),
     babel({
       exclude: 'node_modules/**',
     }),
     resolve(),
     commonjs(),
+    globals(),
+    builtins(),
   ],
 };
