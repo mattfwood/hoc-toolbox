@@ -56,7 +56,7 @@ describe('Fetch', () => {
               </div>
             );
           }}
-        </Fetch>
+         </Fetch>
       );
 
       const loadingNode = getByTestId('loading');
@@ -109,7 +109,7 @@ describe('Fetch', () => {
     const errorNode = await waitForElement(() => getByTestId('error'));
 
     expect(errorNode.textContent).toEqual('Error!');
-    expect(spy).toHaveBeenCalledWith(Error('Network Error'));
+    expect(spy).toHaveBeenCalledWith(TypeError('Network request failed'));
   });
 
   it('should return error with non-string URL prop', () => {

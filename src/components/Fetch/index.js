@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
+
+import('isomorphic-fetch');
 
 class Fetch extends Component {
   state = {
@@ -24,10 +25,12 @@ class Fetch extends Component {
       }
 
       this.setState({ loading: true });
-      const res = await axios.get(url);
+      const res = await fetch(url);
+      // console.log(Object.keys(res));
+      const data = await res.json();
 
       this.setState({
-        data: res.data,
+        data,
         loading: false,
       });
     } catch (error) {
@@ -42,10 +45,12 @@ class Fetch extends Component {
       if (showLoading) {
         this.setState({ loading: true });
       }
-      const res = await axios.get(url);
+
+      const res = await fetch(url);
+      const data = await res.json();
 
       this.setState({
-        data: res.data,
+        data,
         loading: false,
       });
     } catch (error) {
