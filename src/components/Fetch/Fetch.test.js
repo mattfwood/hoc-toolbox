@@ -56,7 +56,7 @@ describe('Fetch', () => {
               </div>
             );
           }}
-        </Fetch>
+         </Fetch>
       );
 
       const loadingNode = getByTestId('loading');
