@@ -33,10 +33,11 @@ export default {
     json(),
     babel({
       exclude: 'node_modules/**',
+      runtimeHelpers: true,
     }),
     resolve(),
     commonjs(),
-    globals(),
-    builtins(),
+    // globals(),
+    // builtins(),
   ],
 };
