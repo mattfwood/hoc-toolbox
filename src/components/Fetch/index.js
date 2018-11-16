@@ -1,8 +1,31 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import('isomorphic-fetch');
+// import('isomorphic-fetch');
 
+/**
+ * <Fetch />
+ *
+ * @param {string} url - URL endpoint to fetch data from
+ * @returns {data|loading|error|refetch}
+ * @example
+ * <Fetch url="https://jsonplaceholder.typicode.com/comments/1">
+ *  {({ data, loading, error }) => (
+ *     <div>
+ *       {loading && (
+ *         <div>Loading...</div>
+ *       )}
+ *       {error && (
+ *         <div>Error!</div>
+ *       )}
+ *       {data && (
+ *         <div>{data.email}</div>
+ *       )}
+ *     </div>
+ *   )}
+ * </Fetch>
+ *
+ */
 class Fetch extends Component {
   state = {
     loading: true,
@@ -69,7 +92,11 @@ class Fetch extends Component {
   render() {
     const { data, error, loading } = this.state;
 
-    return <Fragment>{this.props.children({ data, error, loading, refetch: this.refetch })}</Fragment>;
+    return (
+      <Fragment>
+        {this.props.children({ data, error, loading, refetch: this.refetch })}
+      </Fragment>
+    );
   }
 }
 
